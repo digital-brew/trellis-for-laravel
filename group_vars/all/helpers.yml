@@ -8,8 +8,8 @@ app_env_defaults:
   db_connection: mysql
   db_host: localhost
   db_port: 3306
-  db_database: "{{ site | underscore }}_{{ env }}"
-  db_username: "{{ site | underscore }}"
+  db_database: "{{ item.key | underscore }}_{{ env }}"
+  db_username: "{{ item.key | underscore }}"
   broadcast_driver: log
   cache_driver: file
   queueu_connection: sync

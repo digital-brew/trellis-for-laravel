@@ -1,7 +1,7 @@
 disable_default_pool: true
-memcached_sessions: false
 
 php_extensions_default:
+  php7.3-bcmath: "{{ apt_package_state }}"
   php7.3-cli: "{{ apt_package_state }}"
   php7.3-common: "{{ apt_package_state }}"
   php7.3-curl: "{{ apt_package_state }}"

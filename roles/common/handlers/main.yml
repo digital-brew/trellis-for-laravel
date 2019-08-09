@@ -2,9 +2,14 @@
 - name: disable temporary challenge sites
   import_tasks: disable_challenge_sites.yml
 
-- name: restart memcached
+- name: restart redis
   service:
-    name: memcached
+    name: redis_{{ redis_port }}
+    state: restarted
+
+- name: restart sentinel
+  service:
+    name: sentinel_{{ redis_sentinel_port }}
     state: restarted
 
 - name: reload php-fpm

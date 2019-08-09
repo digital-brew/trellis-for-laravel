@@ -15,7 +15,7 @@ server {
   {% endblock %}
 
   {% block server_basic -%}
-  root  {{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }};
+  root  {{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/public;
   index index.php index.htm index.html;
   add_header Fastcgi-Cache $upstream_cache_status;
 
@@ -98,8 +98,8 @@ server {
   {% endblock -%}
 
   {% block location_uploads_php -%}
-  # Prevent PHP scripts from being executed inside the uploads folder.
-  location ~* /app/uploads/.*\.php$ {
+  # Prevent PHP scripts from being executed inside the storage folder.
+  location ~* /storage/.*\.php$ {
     deny all;
   }
   {% endblock %}

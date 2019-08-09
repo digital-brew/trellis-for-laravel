@@ -20,6 +20,7 @@
     - { role: mariadb, tags: [mariadb] }
     - { role: mailhog, tags: [mailhog, mail] }
     - { role: php, tags: [php] }
+    - { role: supervisor, tags: [supervisor] }
     - { role: xdebug, tags: [php, xdebug] }
     - { role: memcached, tags: [memcached] }
     - { role: nginx, tags: [nginx] }

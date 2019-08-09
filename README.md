@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/circleci/build/gh/roots/trellis?style=flat-square)](https://circleci.com/gh/roots/trellis)
 [![Follow Roots](https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2)](https://twitter.com/rootswp)
 
-Ansible playbooks for setting up a LEMP stack for WordPress.
+Ansible playbooks for setting up a LEMP stack for Laravel, based on Trellis.
 
 - Local development environment with Vagrant
 - High-performance production servers

@@ -64,9 +64,9 @@ $ mkdir example.com && cd example.com
 ```plain
 $ git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git
 ```
-3. Install Bedrock into the `site` directory:
+3. Install Laravel into the `site` directory:
 ```plain
-$ composer create-project roots/bedrock site
+$ composer create-project --prefer-dist laravel/laravel site
 ```
 
 ## Local development setup
@@ -98,23 +98,3 @@ A base Ubuntu 18.04 (Bionic) server is required for setting up remote servers. O
 4. To rollback a deploy, run `ansible-playbook rollback.yml -e "site=<site name> env=<environment>"`
 
 [Read the deploys docs](https://roots.io/trellis/docs/deploys/) for more information.
-
-## Contributing
-
-Contributions are welcome from everyone. We have [contributing guidelines](https://github.com/roots/guidelines/blob/master/CONTRIBUTING.md) to help you get started.
-
-## Trellis sponsors
-
-Help support our open-source development efforts by [becoming a patron](https://www.patreon.com/rootsdev).
-
-<a href="https://kinsta.com/?kaid=OFDHAJIXUDIV"><img src="https://cdn.roots.io/app/uploads/kinsta.svg" alt="Kinsta" width="200" height="150"></a> <a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="200" height="150"></a>
-
-## Community
-
-Keep track of development and community news.
-
-* Participate on the [Roots Discourse](https://discourse.roots.io/)
-* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
-* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
-* Listen to the [Roots Radio podcast](https://roots.io/podcast/)

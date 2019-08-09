@@ -7,7 +7,7 @@ Ansible playbooks for setting up a LEMP stack for Laravel, based on Trellis.
 
 - Local development environment with Vagrant
 - High-performance production servers
-- Zero-downtime deploys for your [Bedrock](https://roots.io/bedrock/)-based WordPress sites
+- Zero-downtime deploys for your Laravel-based sites
 
 ## What's included
 
@@ -48,10 +48,7 @@ The recommended directory structure for a Trellis project looks like:
 ```shell
 example.com/      # → Root folder for the project
 ├── trellis/      # → Your clone of this repository
-└── site/         # → A Bedrock-based WordPress site
-    └── web/
-        ├── app/  # → WordPress content directory (themes, plugins, etc.)
-        └── wp/   # → WordPress core (don't touch!)
+└── site/         # → A Laravel-based site
 ```
 
 See a complete working example in the [roots-example-project.com repo](https://github.com/roots/roots-example-project.com).
@@ -62,7 +59,7 @@ $ mkdir example.com && cd example.com
 ```
 2. Install Trellis:
 ```plain
-$ git clone --depth=1 git@github.com:roots/trellis.git && rm -rf trellis/.git
+$ git clone --depth=1 git@github.com:pepijn-vanvlaanderen/trellis-laravel.git trellis && rm -rf trellis/.git
 ```
 3. Install Laravel into the `site` directory:
 ```plain

@@ -1,13 +1,29 @@
 app_env_defaults:
+  app_name: Laravel
+  app_env: "{{ env }}"
+  app_key: ""
+  app_debug: true
+  app_url: https://example.com
+  log_channel: stack
+  db_connection: mysql
   db_host: localhost
-  db_name: "{{ item.key | underscore }}_{{ env }}"
-  db_user: "{{ item.key | underscore }}"
-  db_user_host: localhost
-  disable_wp_cron: true
-  wp_env: "{{ env }}"
-  wp_home: "{{ ssl_enabled | ternary('https', 'http') }}://{{ site_hosts_canonical | first }}"
-  wp_siteurl: "{{ ssl_enabled | ternary('https', 'http') }}://{{ site_hosts_canonical | first }}/wp"
-  domain_current_site: "{{ site_hosts_canonical | first }}"
+  db_port: 3306
+  db_database: "{{ site | underscore }}_{{ env }}"
+  db_username: "{{ site | underscore }}"
+  broadcast_driver: log
+  cache_driver: file
+  queueu_connection: sync
+  session_driver: file
+  session_lifetime: 120
+  redis_host: 127.0.0.1
+  redis_password: "{{ vault_redis_password }}"
+  redis_port: 6379
+  mail_driver: smtp
+  mail_host: smtp.mailtrap.io
+  mail_port: 2525
+  mail_user: null
+  mail_password: null
+  mail_encryption: null
 
 site_env: "{{ app_env_defaults | combine(vault_app_env_defaults | default({}), item.value.env | default({}), vault_sites[item.key].env) }}"
 site_hosts_canonical: "{{ item.value.site_hosts | map(attribute='canonical') | list }}"

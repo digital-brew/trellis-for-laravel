@@ -9,15 +9,6 @@ module Trellis
       @root_path = root_path
     end
 
-    def multisite_subdomains?
-      @using_multisite_subdomains ||= begin
-        sites.any? do |(_name, site)|
-          next false unless multisite = site['multisite']
-          multisite.fetch('enabled', false) && multisite.fetch('subdomains', false)
-        end
-      end
-    end
-
     def site_hosts_canonical
       @site_hosts_canonical ||= site_hosts.map { |host| host['canonical'] }
     end

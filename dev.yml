@@ -22,10 +22,9 @@
     - { role: php, tags: [php] }
     - { role: supervisor, tags: [supervisor] }
     - { role: xdebug, tags: [php, xdebug] }
-    - { role: memcached, tags: [memcached] }
+    - { role: redis, tags: [redis] }
     - { role: nginx, tags: [nginx] }
     - { role: logrotate, tags: [logrotate] }
     - { role: composer, tags: [composer] }
-    - { role: wp-cli, tags: [wp-cli] }
     - { role: app-setup, tags: [app, app-setup] }
     - { role: app-install, tags: [app, app-install] }

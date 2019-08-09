@@ -31,10 +31,9 @@
     - { role: ssmtp, tags: [ssmtp, mail] }
     - { role: php, tags: [php] }
     - { role: supervisor, tags: [supervisor] }
-    - { role: memcached, tags: [memcached] }
+    - { role: redis, tags: [redis] }
     - { role: nginx, tags: [nginx] }
     - { role: logrotate, tags: [logrotate] }
     - { role: composer, tags: [composer] }
-    - { role: wp-cli, tags: [wp-cli] }
     - { role: letsencrypt, tags: [letsencrypt], when: sites_using_letsencrypt | count }
     - { role: app-setup, tags: [app, app-setup, letsencrypt] }

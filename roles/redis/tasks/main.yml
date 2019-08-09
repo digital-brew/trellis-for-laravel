@@ -1,10 +1,8 @@
 ---
-- name: Install memcached
+- name: Install Redis tools
   apt:
-    name: "{{ item.key }}"
-    state: "{{ item.value }}"
-    cache_valid_time: "{{ apt_cache_valid_time }}"
-  with_dict: "{{ memcached_packages }}"
+    name: redis-tools
+    state: present
 
 - name: Copy the client configuration file
   template:

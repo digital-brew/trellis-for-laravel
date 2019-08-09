@@ -10,8 +10,6 @@ sites:
           - www.example.test
     local_path: ../site # path targeting local Laravel site directory (relative to Ansible root)
     admin_email: admin@example.test
-    multisite:
-      enabled: false
     ssl:
       enabled: false
       provider: self-signed

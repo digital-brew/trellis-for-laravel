@@ -4,8 +4,8 @@
     include_vars:
       file: group_vars/{{ item }}/sites.yml
       name: "{{ item }}_sites"
-    with_items: "{{ envs_with_wp_sites }}"
-    when: envs_with_wp_sites | count > 1
+    with_items: "{{ envs_with_sites }}"
+    when: envs_with_sites | count > 1
 
   - name: Fail if there are duplicate site keys within host's sites
     fail:

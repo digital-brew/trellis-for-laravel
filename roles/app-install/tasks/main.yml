@@ -42,8 +42,8 @@
 
 - name: Run the migrations
   command: "/usr/bin/php artisan migrate --force chdir={{ www_root }}/{{ item.key }}/current"
-  with_dict: "{{ laravel_apps }}"
+  with_dict: "{{ sites }}"
 
 - name: Generate app key
   command: "/usr/bin/php artisan key:generate chdir={{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}"
-  with_dict: "{{ laravel_apps }}"
+  with_dict: "{{ sites }}"

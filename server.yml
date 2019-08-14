@@ -31,7 +31,7 @@
     - { role: ssmtp, tags: [ssmtp, mail] }
     - { role: php, tags: [php] }
     - { role: supervisor, tags: [supervisor] }
-    - { role: davidwittman.redis, tags: [redis] }
+    - { role: redis, tags: [redis] }
     - { role: nginx, tags: [nginx] }
     - { role: logrotate, tags: [logrotate] }
     - { role: composer, tags: [composer] }
